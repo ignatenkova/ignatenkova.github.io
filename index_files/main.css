@@ -298,7 +298,7 @@ ul li {
 }
 .banner h1 {
 
-	color: #ff2238;
+	color: #880a90;
 	font: 36px "Open Sans";
 	font-weight: 300;
 }
@@ -330,7 +330,7 @@ ul li {
 	height:100%;  
   }
   .work .overlay {
-    background: rgba(232, 83, 79, 0.9);
+    background: #4fe8b7e6;
     height: 100%;
     left: 0;
     opacity: 0;
