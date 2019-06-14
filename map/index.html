@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Каменск-Уральский</title>
+	<link rel="stylesheet" href="leaflet.css" />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="leaflet.pm.css" />
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png">
+	<style>
+		.map {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="map" class="map custom-popup">
+		<div class="main" id="main">
+			<div class="main-title">
+				<div class="main-title-text">Каменск-Уральский</div>
+				<div class="main-title-img"></div>
+			</div>
+			<div class="main-item" id="main1">
+				<div class="roads-img"></div>
+				<div class="main-item-text">Ремонт дорог</div>
+			</div>
+			<div class="main-item"  id="main2">
+				<div class="sport-img"></div>
+				<div class="main-item-text">Спортивные объекты</div>
+			</div>
+			<div class="main-item"  id="main3">
+				<div class="saturday-img"></div>
+				<div class="main-item-text">Субботники</div>
+			</div>
+		</div>
+		<div class="year" id="year">
+			<div class="year-title">
+				<div class="back" id="back1"></div>
+				<div class="year-title-text">Ремонт дорог</div>
+			</div>
+			<div class="year-item"  id="year1">
+				<div class="year-text">за 2018 год</div>
+			</div>
+			<div class="year-item"  id="year2">
+				<div class="year-text old">за 2017 год</div>
+			</div>
+			<div class="year-item"  id="year3">
+				<div class="year-text old">за 2016 год</div>
+			</div>
+		</div>
+		<div class="str" id="str2018">
+			<div class="str-title">
+				<div class="back" id="back2"></div>
+				<div class="str-title-text">Ремонт дорог 2018</div>
+			</div>
+			<div class="str-item"  id="str2018-1">
+				<div class="str-text">ул. Алюминиевая</div>
+				<div class="str-text small">24.06.18 - 04.07.18</div>
+			</div>
+			<div class="str-item"  id="str2018-2">
+				<div class="str-text">ул. Каменская</div>
+				<div class="str-text small">25.07.18 - 05.08.18</div>
+			</div>
+			<div class="str-item"  id="str2018-3">
+				<div class="str-text">ул. Суворова</div>
+				<div class="str-text small">26.09.18 - 06.10.18</div>
+			</div>
+		</div>
+		<div class="str" id="str2017">
+			<div class="str-title">
+				<div class="back" id="back3"></div>
+				<div class="str-title-text">Ремонт дорог 2017</div>
+			</div>
+			<div class="str-item" id="str2017-1">
+				<div class="str-text">ул. Кирова</div>
+				<div class="str-text small">24.06.17 - 04.07.17</div>
+			</div>
+			<div class="str-item" id="str2017-2">
+				<div class="str-text">пр. Победы</div>
+				<div class="str-text small">25.07.17 - 05.08.17</div>
+			</div>
+			<div class="str-item" id="str2017-3">
+				<div class="str-text">ул. Мичурина</div>
+				<div class="str-text small">26.09.17 - 06.10.17</div>
+			</div>
+		</div>
+		<div class="str" id="str2016">
+			<div class="str-title">
+				<div class="back" id="back4"></div>
+				<div class="str-title-text">Ремонт дорог 2016</div>
+			</div>
+			<div class="str-item"  id="str2016-1">
+				<div class="str-text">ул. Кунавина</div>
+				<div class="str-text small">24.06.16 - 04.07.16</div>
+			</div>
+			<div class="str-item" id="str2016-2">
+				<div class="str-text">ул. Крылова</div>
+				<div class="str-text small">25.07.16 - 05.08.16</div>
+			</div>
+			<div class="str-item" id="str2016-3">
+				<div class="str-text">ул. Привокзальная</div>
+				<div class="str-text small">26.09.16 - 06.10.16</div>
+			</div>
+		</div>
+		<div class="road" id="road2018-1">
+			<div class="road-title">
+				<div class="back" id="back5"></div>
+				<div class="road-title-text">ул. Алюминиевая</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Дата:</div>
+				<div class="road-text small">24.06.18 - 04.07.18</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Объем финансирования (тыс. руб.):</div>
+				<div class="road-text small">80 000,000</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Исполнитель:</div>
+				<div class="road-text small">СИНАРА-БЛАГОУСТРОЙСТВО, ООО</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Тип работы:</div>
+				<div class="road-text small">кап. ремонт</div>
+			</div>
+		</div>
+		<div class="road" id="road2018-2">
+			<div class="road-title">
+				<div class="back" id="back6"></div>
+				<div class="road-title-text">ул. Каменская</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Дата:</div>
+				<div class="road-text small">25.07.18 - 05.08.18</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Объем финансирования (тыс. руб.):</div>
+				<div class="road-text small">28 417,862</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Исполнитель:</div>
+				<div class="road-text small">Городское управление дорожно-строительных работ, ООО</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Тип работы:</div>
+				<div class="road-text small">кап. ремонт</div>
+			</div>
+		</div>
+		<div class="road" id="road2018-3">
+			<div class="road-title">
+				<div class="back" id="back7"></div>
+				<div class="road-title-text">ул. Суворова</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Дата:</div>
+				<div class="road-text small">26.09.18 - 06.10.18</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Объем финансирования (тыс. руб.):</div>
+				<div class="road-text small">25 689,787</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Исполнитель:</div>
+				<div class="road-text small">Каменский родник</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Тип работы:</div>
+				<div class="road-text small">кап. ремонт</div>
+			</div>
+		</div>
+		<div class="road" id="road2017-1">
+			<div class="road-title">
+				<div class="back" id="back8"></div>
+				<div class="road-title-text">ул. Кирова</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Дата:</div>
+				<div class="road-text small">24.06.17 - 04.07.17</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Объем финансирования (тыс. руб.):</div>
+				<div class="road-text small">8 301,920 </div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Исполнитель:</div>
+				<div class="road-text small">СИНАРА-БЛАГОУСТРОЙСТВО, ООО</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Тип работы:</div>
+				<div class="road-text small">кап. ремонт</div>
+			</div>
+		</div>
+		<div class="road" id="road2017-2">
+			<div class="road-title">
+				<div class="back" id="back9"></div>
+				<div class="road-title-text">пр. Победы</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Дата:</div>
+				<div class="road-text small">25.07.17 - 05.08.17</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Объем финансирования (тыс. руб.):</div>
+				<div class="road-text small">675,772</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Исполнитель:</div>
+				<div class="road-text small">Городское управление дорожно-строительных работ, ООО</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Тип работы:</div>
+				<div class="road-text small">кап. ремонт</div>
+			</div>
+		</div>
+		<div class="road" id="road2017-3">
+			<div class="road-title">
+				<div class="back" id="back10"></div>
+				<div class="road-title-text">ул. Мичурина</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Дата:</div>
+				<div class="road-text small">26.09.17 - 06.10.17</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Объем финансирования (тыс. руб.):</div>
+				<div class="road-text small">5 453,129</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Исполнитель:</div>
+				<div class="road-text small">Каменский родник</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Тип работы:</div>
+				<div class="road-text small">кап. ремонт</div>
+			</div>
+		</div>
+		<div class="road" id="road2016-1">
+			<div class="road-title">
+				<div class="back" id="back11"></div>
+				<div class="road-title-text">ул. Кунавина</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Дата:</div>
+				<div class="road-text small">24.06.16 - 04.07.16</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Объем финансирования (тыс. руб.):</div>
+				<div class="road-text small">25 283,010</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Исполнитель:</div>
+				<div class="road-text small">СИНАРА-БЛАГОУСТРОЙСТВО, ООО</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Тип работы:</div>
+				<div class="road-text small">кап. ремонт</div>
+			</div>
+		</div>
+		<div class="road" id="road2016-2">
+			<div class="road-title">
+				<div class="back" id="back12"></div>
+				<div class="road-title-text">ул. Крылова</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Дата:</div>
+				<div class="road-text small">25.07.16 - 05.08.16</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Объем финансирования (тыс. руб.):</div>
+				<div class="road-text small">14 004,378</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Исполнитель:</div>
+				<div class="road-text small">Городское управление дорожно-строительных работ, ООО</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Тип работы:</div>
+				<div class="road-text small">кап. ремонт</div>
+			</div>
+		</div>
+		<div class="road" id="road2016-3">
+			<div class="road-title">
+				<div class="back" id="back13"></div>
+				<div class="road-title-text">ул. Привокзальная</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Дата:</div>
+				<div class="road-text small">26.09.16 - 06.10.16</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Объем финансирования (тыс. руб.):</div>
+				<div class="road-text small">11 200,000</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Исполнитель:</div>
+				<div class="road-text small">Каменский родник</div>
+			</div>
+			<div class="road-item">
+				<div class="road-text">Тип работы:</div>
+				<div class="road-text small">кап. ремонт</div>
+			</div>
+		</div>
+		<div class="sport" id="sport">
+			<div class="sport-title">
+				<div class="back" id="back14"></div>
+				<div class="sport-title-text">Спортивные объекты</div>
+			</div>
+			<div class="sport-item" id="sport-1">
+				<div class="sport-text">мототрасса "Юность"</div>
+			</div>
+			<div class="sport-item"  id="sport-2">
+				<div class="sport-text">каток "Каменск-Арена"</div>
+			</div>
+			<div class="sport-item" id="sport-3">
+				<div class="sport-text">спортивный комплекс "Олимп"</div>
+			</div>
+		</div>
+		<div class="sportObj" id="mototr">
+			<div class="sportObj-title">
+				<div class="back" id="back15"></div>
+				<div class="sportObj-title-text">мототрасса "Юность"</div>
+			</div>
+				<div class="sportObj-mototr"></div>
+			<div class="sportObj-item">
+				<div class="sport-text"><a href="http://www.skyam.ru/">skyam.ru</a></div>
+			</div>
+		</div>
+		<div class="sportObj" id="arena">
+			<div class="sportObj-title">
+				<div class="back" id="back16"></div>
+				<div class="sportObj-title-text">каток "Каменск-Арена"</div>
+			</div>
+				<div class="sportObj-arena"></div>
+			<div class="sportObj-item">
+				<div class="sportObj-text">ул. Ленина, 5Б</div>
+			</div>
+			<div class="sportObj-item">
+				<div class="sportObj-text">Ежедневно 09:00–21:00</div>
+			</div>
+			<div class="sportObj-item">
+				<div class="sportObj-text">+7 (3439) 30-29-30</div>
+			</div>
+		</div>
+		<div class="sportObj" id="olimp">
+			<div class="sportObj-title">
+				<div class="back" id="back17"></div>
+				<div class="sportObj-title-text">спортивный комплекс "Олимп"</div>
+			</div>
+				<div class="sportObj-olimp"></div>
+			<div class="sportObj-item">
+				<div class="sportObj-text">ул. Ленина, 9</div>
+			</div>
+			<div class="sportObj-item">
+				<div class="sportObj-text">Ежедневно 09:00 – 22:00</div>
+			</div>
+			<div class="sportObj-item">
+				<div class="sportObj-text">+7 (3439) 32-31-71</div>
+			</div>
+			<div class="sportObj-item">
+				<div class="sportObj-text"><a href="http://neywasport.ru/">neywasport.ru</a></div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="leaflet.js"></script>
+	<script src="leaflet.pm.min.js"></script>
+	<script src="index.js"></script>
+
+</body>
+</html>

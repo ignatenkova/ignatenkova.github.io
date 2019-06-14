@@ -1,0 +1,500 @@
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, 
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of Eric Meyer's CSS Reset */
+
+
+
+
+
+.container{
+	/*display: inline-block;*/
+	margin-left: 20px; 
+	margin-right: 20px; 
+	margin-bottom: 20px; 
+	margin-top: 0px;
+	padding: 0px
+	/*position: relative;*/
+}
+
+/*лимон*/
+.lime{
+	width: 200px;
+	height: 200px;
+	margin: 20px;
+	background: #CDDC39;
+	border-bottom-right-radius: 114px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 116px;
+	border-top-right-radius: 10px;
+
+}
+
+/*треугольники*/
+.triangle-up{
+	width: 0;
+	height: 0;
+	border-bottom: 100px solid #824c86;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	display: block;
+	/*margin: 0;*/
+
+}
+.triangle-down{
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 100px solid #4a1b1b;
+	/*margin: 0;*/
+	
+
+}
+
+.triangle-right{
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	border-left: 100px solid rgba(255, 24, 0, 0.32);
+}
+
+/*всплывающее окно*/
+.little-tip{
+	width: 150px;
+	height: 80px;
+	background: #888;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	position:relative;
+
+}
+
+.little-tip:after{
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #888;
+	bottom: -10px;
+	left: 65px;
+}
+
+/*велосипед*/
+.fon{
+	width: 500px;
+	height: 250px;
+	border: 3px solid #999;
+	margin: 50px;
+	background-image: url(bike-icon1.png), url(bicycles.png);
+	background-repeat: no-repeat, repeat;
+	background-position: center;
+
+
+}
+
+/*бабочка*/
+.butterfly {
+	
+	background-position: top right ;
+	background-attachment: fixed;
+	z-index:1;
+	width: 300px;
+	height: 1000px;
+	position: absolute;
+	/*margin: 50px;*/
+	background-image: url(w128h1281348669884MorphoAdonisHuallegaTop.png);
+	background-repeat: no-repeat, repeat;
+	background-position: top left;
+	margin: 0;
+	-webkit-background-size: 150px;
+	background-size: 150px;
+}
+
+
+
+
+/*кнопки*/
+.buttons li{
+	background: url(sprite.png) no-repeat;
+	display: inline-block;
+	width: 123px;
+	height: 32px;
+	cursor: pointer; /*изменение курсора при наведении*/ 
+}
+
+.buttons .button1:hover{
+	background-position: 0 -32px;
+}
+
+.buttons .button1:active{
+	background-position: 0 -64px;
+}
+
+.buttons .button2{
+	background-position: -130px 0;
+}
+.buttons .button2:hover{
+	background-position: -130px -32px;
+}
+.buttons .button2:active{
+	background-position: -130px -64px;
+}
+
+
+.buttons .button3{
+	background-position: 0px -102px;
+}
+.buttons .button3:hover{
+	background-position: 0 -134px;
+}
+.buttons .button3:active{
+	background-position: 0 -166px;
+}
+
+/*котята*/
+.cats li{
+	background: url(7563009-cat-running-animation.jpg) no-repeat;
+	display: inline-block;
+	/*width: 200px;
+	height: 170px;*/
+	cursor: pointer; /*изменение курсора при наведении*/ 
+}
+.cats .cat1{
+	width: 180px;
+	height: 190px;
+}
+.cats .cat1:hover{
+	background-position: 0 -610px;
+}
+
+.cats .cat2{
+	background-position: -410px 0;
+	width: 213px;
+	height: 190px;
+}
+.cats .cat2:hover{
+	background-position: -190px 0px;
+}
+.cats .cat3{
+	background-position: -216px -431px;
+	width: 226px;
+	height: 190px;
+}
+.cats .cat3:hover{
+	background-position: -400px -190px;
+}
+
+.button-circle {
+    display:inline-block;
+    margin: 40px;
+    width: 100px;
+    height: 100px;
+    background: url(pink_rice.png);
+    cursor: pointer;
+    
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    
+    box-shadow: 0 3px 20px rgba(0,0,0,.25),
+     inset 0 2px 0 rgba(255,255,255,.6), /*inset - внутренняя тень*/
+      0 2px 0 rgba(0,0,0,.1), 
+      inset 0 0 20px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 3px 20px rgba(0,0,0,.25),
+     inset 0 2px 0 rgba(255,255,255,.6),
+      0 2px 0 rgba(0,0,0,.1), 
+      inset 0 0 20px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 3px 20px rgba(0,0,0,.25),
+     inset 0 2px 0 rgba(255,255,255,.6),
+      0 2px 0 rgba(0,0,0,.1), 
+      inset 0 0 20px rgba(0,0,0,.1);
+
+}
+
+.button-circle:hover {
+    box-shadow: inset 0 0 20px rgba(0,0,0,.2),
+     0 2px 0 rgba(255,255,255,.4),
+     inset 0 2px 0 rgba(0,0,0,.1),
+      inset 0 0 20px rgba(0,0,0,.1);
+    -moz-box-shadow: inset 0 0 20px rgba(0,0,0,.2),
+     0 2px 0 rgba(255,255,255,.4),
+     inset 0 2px 0 rgba(0,0,0,.1),
+      inset 0 0 20px rgba(0,0,0,.1);
+    -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,.2),
+     0 2px 0 rgba(255,255,255,.4),
+     inset 0 2px 0 rgba(0,0,0,.1),
+     inset 0 0 20px rgba(0,0,0,.1);
+}
+
+body{
+	font: 1em, 'PT Sans', Tahoma, Arial;
+	text-transform: uppercase; /*все буквы заглавные*/
+	background: url(pink_rice.png);
+}
+
+/*Main menu*/
+
+.nav{
+	list-style: none;
+	margin: 30px;
+	opacity: .5;/*наполовину непрозрачное*/
+	padding: 0;
+	width: 50px;
+	transition: opacity .3s ease-in-out;
+	-moz-transition: opacity .3s ease-in-out;
+	-webkit-transition: opacity .3s ease-in-out;
+	-o-transition: opacity .3s ease-in-out;
+}
+
+.nav:hover{
+	opacity: 1;
+}
+
+.nav li {
+	height: 50px;
+	overflow: hidden;/*чтобы ничего кроме иконки не отображалось*/
+	width: 50px;
+
+	transition: width .2s ease-in-out, height .2s ease-in-out .2s;
+	-moz-transition: width .2s ease-in-out, height .2s ease-in-out .2s;
+	-webkit-transition: width .2s ease-in-out, height .2s ease-in-out .2s;
+	-o-transition: width .2s ease-in-out, height .2s ease-in-out .2s;
+
+}
+
+.nav li:hover {
+	height: 175px;
+	width: 200px;
+
+}
+
+.nav li a{
+	background: #bbb;
+	color: #fff; /*цвет текста*/
+	cursor: pointer;
+	display: block;
+	height: 40px;
+	line-height: 40px; /*текст выровнен по центру по вертикали*/
+	margin: 1px;
+	padding-left: 15px;
+	text-decoration: none; /*убрали нижнее подчеркивание*/
+	width: 200px;
+
+	/*transition-property: all;*//*для какого св-ва задать плавный переход*/
+	/*transition-duration: .2s;*//*продолжительность перехода*/
+	/*transition-timing-function: ease-in-out;*/
+	/*transition-delay: задержка перед анимацией*/
+	transition: background .2s ease-in-out;
+	-moz-transition: background .2s ease-in-out;
+	-webkit-transition: background .2s ease-in-out;
+	-o-transition: background .2s ease-in-out;
+}
+
+.nav li a:hover {
+	background: #2fc5ff;/*изменяем цвет при наведении*/
+}
+
+.nav li a:first-child {
+	font-size: 1.1em;
+	height: 50px;
+	line-height: 50px;
+	position: relative;/* т. к. будем позиционировать иконки*/
+	text-indent: 36px;/*чтобы текст не залазил на иконку*/
+}
+
+.nav li a:first-child::before {
+	content:'';
+	display: block;
+	height: 32px;/*размер иконок*/
+	left: 9px;
+	position: absolute;
+	top: 9px;
+	width: 32px;/*размер иконок*/
+
+}
+
+.main-menu a:first-child::before {
+	background: url(home.png) center no-repeat;
+}
+.settings a:first-child::before {
+	background: url(settings.png) center no-repeat;
+}
+.link a:first-child::before {
+	background: url(link.png) center no-repeat;
+}
+.search a:first-child::before {
+	background: url(search.png) center no-repeat;
+}
+
+/*Градиенты*/
+.gradient {
+	width: 400px;
+	height: 300px;
+	float: left;
+	margin: 40px;
+	background: #999;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+
+	border-radius: 5px;
+	box-shadow: 0 8px 15px rgba(0,0,0,.6);
+	background: #999;
+	background: linear-gradient(#333,#bbb);
+}
+
+.gradient::after{
+	content:'';
+	width: 400px;
+	height: 300px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	transition: opacity .3s;
+
+	background: repeating-linear-gradient(-45deg,rgba(0,0,0,.3) 4px,
+		rgba(0,0,0,.3) 8px, transparent 8px, transparent 12px), 
+	repeating-linear-gradient(45deg,rgba(0,0,0,.3) 4px,
+		rgba(0,0,0,.3) 8px, transparent 8px, transparent 12px);
+}
+
+background: repeating-linear-gradient(-45deg,rgba(0,0,0,.3) 4px,
+		rgba(0,0,0,.3) 8px, transparent 8px, transparent 12px), 
+	repeating-linear-gradient(45deg,rgba(0,0,0,.3) 4px,
+		rgba(0,0,0,.3) 8px, transparent 8px, transparent 12px);
+
+.gradient:hover::after{
+	opacity: 0;
+
+}
+
+
+.gradient2 {
+	width: 400px;
+	height: 300px;
+	float: left;
+	margin: 40px;
+	background: #999;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+
+	border-radius: 5px;
+	box-shadow: 0 8px 15px rgba(0,0,0,.6);
+	background: #999;
+	background: linear-gradient(#333,#bbb);
+}
+
+.gradient2::after{
+	content:'';
+	width: 400px;
+	height: 300px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	transition: opacity .3s;
+
+	background: radial-gradient(transparent, rgba(0,0,0,.7));
+}
+
+
+
+.gradient2:hover::after{
+	opacity: 0;
+
+}
+
+/*Трансформации*/
+
+#transform{
+	margin-top: 420px;
+	margin-left: 40px;
+	background:rgba(0,0,0,.3);
+	width: 250px;
+	height: 150px;;
+	line-height: 150px;
+	text-align: center;
+	color: #fff;
+	border: 3px;
+	border-radius:8px;
+	transform: translate(110px,80px) rotate(-30deg) scale(1.5) skew(22deg);
+}
+
+#wrapper{
+	perspective: 500px;
+	-webkit-perspective: 500px;
+	-moz-perspective: 500px;
+	width: 200px;
+	height: 200px;
+
+}
+
+#transform2{
+	margin-top: 200px;
+	margin-bottom: 200px;
+	margin-left: 40px;
+	background:rgba(0,0,0,.3);
+	width: 450px;
+	height: 350px;
+	line-height: 150px;
+	text-align: center;
+	color: #fff;
+	border: 3px;
+	border-radius:8px;
+	transform: rotate3d(1,8,-1,30deg);
+}
+
+#myframe{
+	width: 450px;
+	height: 350px;
+}

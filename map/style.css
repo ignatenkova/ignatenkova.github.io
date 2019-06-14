@@ -1,0 +1,379 @@
+/*
+ Theme Name:   maps
+ Theme URI:    http://localhost/wordpress/
+ Description:  TEST
+ Author:       Nastya Ign
+ Author URI:   http://example.com
+ Version:      1.0.0
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+*/
+* {
+	padding: 0;
+	margin: 0;
+	font-size: 18px;
+	line-height: 24px;
+	box-sizing: border-box;
+}
+div {
+	display: inline-block;
+}
+.leaflet-control-layers {
+	display: none;
+}
+.leaflet-control-layers-overlays {
+	padding: 10px;
+	padding-bottom: 25px;
+	background: #FFFCEC;
+}
+.leaflet-control-layers-overlays label:hover {
+	background: #ABDCD6;
+}
+/*.leaflet-control-layers-overlays label:active {
+	background: rgba(0, 188, 212, 0.25);
+}*/
+.leaflet-control-layers-overlays label div{
+	padding: 0px 15px 0px 25px;
+	font-size: 20px;
+	cursor: pointer;
+	border-bottom: solid 1px;
+}
+
+.leaflet-control-layers-selector {
+	display: none;
+}
+#first {
+	padding: 0 !important;
+	margin-left: -15px;
+	border-bottom: solid 0px;
+}
+.first:hover > div {
+	background-color: #FFFCEC;
+}
+
+
+/*.custom-popup .leaflet-popup-content-wrapper {
+	background:#2c3e50;
+	color:#fff;
+	font-size:16px;
+	line-height:24px;
+	}
+.custom-popup .leaflet-popup-content-wrapper a {
+	color:rgba(255,255,255,0.5);
+	}
+.custom-popup .leaflet-popup-tip-container {
+	width:30px;
+	height:15px;
+	}
+.custom-popup .leaflet-popup-tip {
+	background:#2c3e50;
+	}
+*/
+.leaflet-popup-content-wrapper {
+	display: block;
+}
+.leaflet-popup-tip-container {
+	display: block;
+}
+.leaflet-popup-tip {
+	display: block;
+}
+
+
+#main {
+	/*display: none;*/
+}
+.main{
+	z-index: 500;
+	/*position: absolute;*/
+	position: relative;
+	width: 315px;
+	min-height: 36px;
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
+	background: #fff;
+	border-radius: 4px;
+	overflow: hidden;
+	margin: 10px;
+}
+.main-title {
+	display: block;
+}
+.main-title-text{
+	padding: 8px 0 8px 16px;
+	font-size: 16px;
+	line-height: 24px;
+	margin-right: 16px;
+}
+.main-title-img {
+	width: 67px;
+	padding: 8px 0;
+	background: url("images/title-img.png") no-repeat; 
+}
+.main-item{
+	display: block;
+	padding: 10px 15px 6px;
+	border-top: 1px solid #ededed;
+	cursor: pointer;
+}
+.main-item:hover {
+	background: #f5f5f5;
+}
+.main-item-text {
+	height: 25px;
+	margin: 10px 0 7px 10px;
+	vertical-align: top;
+}
+.roads-img {
+	width: 45px;
+	height: 45px;
+	background: url("images/dumper.png") no-repeat center;
+	background-size: contain;
+	border-radius: 10px;
+}
+.sport-img {
+	width: 45px;
+	height: 45px;
+	background: url("images/bike.png") no-repeat;
+	background-size: contain;
+	border-radius: 10px;
+}
+.saturday-img {
+	width: 45px;
+	height: 45px;
+	background: url("images/plant.png") no-repeat;
+	background-size: contain;
+	border-radius: 10px;
+}
+.back {
+	width: 20px;
+	height: 20px;
+	background: url(images/left-arrow.png) no-repeat;
+	background-size: contain;
+	margin: 0px 0 0 10px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+#year {
+	display: none;
+}
+.year {
+	z-index: 500;
+	/*position: absolute;*/
+	position: relative;
+	width: 315px;
+	min-height: 36px;
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
+	background: #fff;
+	border-radius: 4px;
+	overflow: hidden;
+	margin: 10px;
+}
+.year-title {
+	display: block;
+	background: #d0f7fc;
+}
+.year-title-text {
+	padding: 8px 0 8px 16px;
+	font-size: 16px;
+	line-height: 24px;
+	margin-right: 16px;
+}
+.year-item {
+	display: block;
+	padding: 5px;
+	border-top: 1px solid #ededed;
+	cursor: pointer;
+}
+.year-item:hover {
+	background: #f5f5f5;
+}
+.year-text {
+	height: 25px;
+	margin: 10px 0 7px 10px;
+	vertical-align: top;
+}
+.old {
+	color: #7d7a7a;
+}
+#str2018, #str2017, #str2016 {
+	display: none;
+}
+.str {
+	z-index: 500;
+	/*position: absolute;*/
+	position: relative;
+	width: 315px;
+	min-height: 36px;
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
+	background: #fff;
+	border-radius: 4px;
+	overflow: hidden;
+	margin: 10px;
+}
+.str-title {
+	display: block;
+	background: #d0f7fc;
+}
+.str-title-text {
+	padding: 8px 0 8px 16px;
+	font-size: 16px;
+	line-height: 24px;
+	margin-right: 16px;
+}
+.str-item {
+	display: block;
+	padding: 15px;
+	border-top: 1px solid #ededed;
+	cursor: pointer;
+}
+.str-item:hover {
+	background: #f5f5f5;
+}
+.str-text {
+	height: 25px;
+	vertical-align: middle;
+}
+.small {
+	font-size: 14px;
+	color: #7d7a7a;
+}
+
+.road {
+	z-index: 500;
+	/*position: absolute;*/
+	position: relative;
+	width: 315px;
+	min-height: 36px;
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
+	background: #fff;
+	border-radius: 4px;
+	overflow: hidden;
+	margin: 10px;
+}
+.road-title {
+	display: block;
+	background: #d0f7fc;
+}
+.road-title-text {
+	padding: 8px 0 8px 16px;
+	font-size: 16px;
+	line-height: 24px;
+	margin-right: 16px;
+}
+.road-item {
+	display: block;
+	padding: 15px;
+	border-top: 1px solid #ededed;
+	cursor: pointer;
+}
+.road-item:hover {
+	background: #f5f5f5;
+}
+.road-text {
+	/*height: 25px;*/
+	font-size: 16px;
+	vertical-align: top;
+}
+.road-text .small{
+	font-size: 16px;
+}
+#road2018-1, #road2018-2, #road2018-3,#road2017-1, #road2017-2, #road2017-3,#road2016-1, #road2016-2, #road2016-3 {
+	display: none;
+}
+#sport {
+	display: none;
+}
+.sport {
+	z-index: 500;
+	/*position: absolute;*/
+	position: relative;
+	width: 315px;
+	min-height: 36px;
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
+	background: #fff;
+	border-radius: 4px;
+	overflow: hidden;
+	margin: 10px;
+}
+.sport-title {
+	display: block;
+	background: #d2bdf7;
+}
+.sport-title-text {
+	padding: 8px 0 8px 16px;
+	font-size: 16px;
+	line-height: 24px;
+	margin-right: 16px;
+}
+.sport-item {
+	display: block;
+	padding: 15px;
+	border-top: 1px solid #ededed;
+	cursor: pointer;
+}
+.sport-item:hover {
+	background: #f5f5f5;
+}
+.sport-text {
+	height: 25px;
+	/*margin: 10px 0 7px 10px;*/
+	vertical-align: top;
+}
+#mototr, #arena, #olimp {
+	display: none;
+}
+.sportObj {
+	z-index: 500;
+	/*position: absolute;*/
+	position: relative;
+	width: 315px;
+	min-height: 36px;
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
+	background: #fff;
+	border-radius: 4px;
+	overflow: hidden;
+	margin: 10px;
+}
+.sportObj-title {
+	display: block;
+	background: #d2bdf7;
+}
+.sportObj-title-text {
+	padding: 8px 0 8px 16px;
+	font-size: 16px;
+	line-height: 24px;
+	margin-right: 16px;
+}
+.sportObj-item {
+	display: block;
+	padding: 15px;
+	border-top: 1px solid #ededed;
+	cursor: pointer;
+}
+.sportObj-item:hover {
+	background: #f5f5f5;
+}
+.sportObj-mototr {
+    height: 140px;
+    width: 315px;
+    background: url(images/mototr.jpg) no-repeat center;
+    background-size: cover;
+}
+.sportObj-arena {
+    height: 140px;
+    width: 315px;
+    background: url(images/arena.jpg) no-repeat center;
+    background-size: cover;
+}
+.sportObj-olimp {
+    height: 140px;
+    width: 315px;
+    background: url(images/olimp.jpg) no-repeat center;
+    background-size: cover;
+}
+.sportObj-text {
+	height: 25px;
+	vertical-align: top;
+}
+.leaflet-control-attribution a{
+	font-size: 12px;
+}
