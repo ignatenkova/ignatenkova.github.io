@@ -244,6 +244,9 @@ nav li:hover {
 	padding-left: 12px;
 	margin-bottom: 20px;
 }
+.our-team img {
+	margin-right: 0px;
+}
 .our-team p {
 	color: #fff;
 	font-size: 2rem;
